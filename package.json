@@ -1,0 +1,32 @@
+{
+    "name": "tdd-jest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js --ignore __test__",
+        "pretest": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mysql2": "^2.1.0",
+        "sequelize": "^5.21.7"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "factory-girl": "^5.0.4",
+        "faker": "^4.1.0",
+        "jest": "^25.4.0",
+        "nodemon": "^2.0.3",
+        "sequelize-cli": "^5.5.1",
+        "sqlite3": "^4.2.0",
+        "supertest": "^4.0.2"
+    }
+}
